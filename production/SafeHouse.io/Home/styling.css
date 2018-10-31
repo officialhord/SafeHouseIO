@@ -1,0 +1,11 @@
+.root{
+
+-fx-background-image: url("background.png");
+-fx-background-repeat: repeat;
+}
+
+.sidebar{
+
+-fx-background-color: #4169e1;
+
+}

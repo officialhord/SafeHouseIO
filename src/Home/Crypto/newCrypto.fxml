@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="432.0" prefWidth="739.0" stylesheets="@../styling.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Crypto.newCrypto">
+   <children>
+      <AnchorPane prefHeight="432.0" prefWidth="211.0" style="-fx-background-color: #1c294c;">
+         <children>
+            <Text fill="#e4e4e4" layoutX="51.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SafeHouse.io">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="82.0" fitWidth="90.0" layoutX="63.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../locklight.png" />
+               </image>
+            </ImageView>
+            <Text fill="#e4e4e4" layoutX="60.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password Reminder">
+               <font>
+                  <Font name="Arial" size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#e4e4e4" layoutX="50.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Crypto" underline="true">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="336.0" layoutY="73.0" prefHeight="253.0" prefWidth="315.0" spacing="10.0">
+         <children>
+            <JFXTextField fx:id="CrptoName" alignment="CENTER" prefHeight="28.0" prefWidth="267.0" promptText="Coin/Token Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXComboBox fx:id="Cryptotype" prefHeight="20.0" prefWidth="181.0" promptText="Coin or Token?" HBox.hgrow="ALWAYS" />
+                  <JFXTextField fx:id="CryptoAbbreviation" alignment="CENTER" prefHeight="18.0" prefWidth="196.0" promptText="Abbreviation">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="CryptoEmail" alignment="CENTER" layoutX="10.0" layoutY="38.0" prefHeight="28.0" prefWidth="267.0" promptText="Email">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="CryptoUsername" alignment="CENTER" layoutX="10.0" layoutY="66.0" prefHeight="28.0" prefWidth="267.0" promptText="Username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="CryptoPassword" alignment="CENTER" layoutX="10.0" layoutY="94.0" prefHeight="28.0" prefWidth="267.0" promptText="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="Cryptowallet" alignment="CENTER" layoutX="10.0" layoutY="122.0" prefHeight="28.0" prefWidth="267.0" promptText="Coin/Token Wallet Address">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="Crptosite" alignment="CENTER" layoutX="15.0" layoutY="15.0" prefHeight="28.0" prefWidth="267.0" promptText="Coin/Token Website">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <JFXButton fx:id="saveCrypto" layoutX="454.0" layoutY="377.0" mnemonicParsing="false" onAction="#addAcount" ripplerFill="#c60000" style="-fx-border-color: #1c294c; -fx-border-width: 0px 0px 2px 0px;" text="Save Crypto">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

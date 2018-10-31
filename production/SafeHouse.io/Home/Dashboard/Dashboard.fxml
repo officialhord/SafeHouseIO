@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="522.0" prefWidth="900.0" styleClass="root" stylesheets="@../styling.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Dashboard.DashboardController">
+    <children>
+        <AnchorPane layoutX="-5.0" layoutY="-18.0" prefHeight="467.0" prefWidth="211.0" style="-fx-background-color: #1c294c;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Text fill="#e4e4e4" layoutX="51.0" layoutY="424.4453125" strokeType="OUTSIDE" strokeWidth="0.0" text="SafeHouse.io" AnchorPane.bottomAnchor="34.740234375">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="82.0" fitWidth="90.0" layoutX="63.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="56.0">
+                    <image>
+                        <Image url="@../locklight.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#e4e4e4" layoutX="60.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password Reminder" AnchorPane.bottomAnchor="25.880859375">
+                    <font>
+                        <Font name="Arial" size="10.0" />
+                    </font>
+                </Text>
+                <Text fx:id="usernamel" fill="WHITE" layoutX="53.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@Username">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Text>
+                <JFXButton fx:id="newwallet" layoutX="38.0" layoutY="199.0" mnemonicParsing="false" onAction="#addWallet" prefHeight="32.0" prefWidth="139.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="New Wallet" textFill="#d0d0d0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </JFXButton>
+                <Separator layoutY="128.0" prefHeight="11.0" prefWidth="214.0">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Separator>
+                <Separator layoutY="301.0" prefHeight="11.0" prefWidth="214.0">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Separator>
+                <JFXButton fx:id="newact" layoutX="38.0" layoutY="149.0" mnemonicParsing="false" onAction="#addAccount" prefHeight="32.0" prefWidth="139.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="New Account" textFill="#d0d0d0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="newcrypto" layoutX="38.0" layoutY="249.0" mnemonicParsing="false" onAction="#addCrypto" prefHeight="32.0" prefWidth="139.0" ripplerFill="WHITE" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="New Crypto" textFill="#d0d0d0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </JFXButton>
+                <ImageView fitHeight="69.0" fitWidth="73.0" layoutX="73.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../userlight.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Polygon fill="#1c294c" layoutX="211.0" layoutY="265.0" stroke="#1c294c" strokeType="INSIDE">
+            <points>
+                <Double fx:value="-50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="-60.0" />
+            </points>
+        </Polygon>
+        <TableView fx:id="Acctstable" layoutX="267.0" layoutY="164.0" onMouseClicked="#tableClick" prefHeight="171.0" prefWidth="490.0">
+            <columns>
+                <TableColumn fx:id="AcctsAddress" prefWidth="75.0" text="Website" />
+                <TableColumn fx:id="AcctsEmail" prefWidth="75.0" text="Email" />
+                <TableColumn fx:id="AcctsPassword" prefWidth="75.0" text="Password" />
+                <TableColumn fx:id="AcctsUsername" prefWidth="75.0" text="Username" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Pane layoutX="232.0" layoutY="25.0" prefHeight="109.0" prefWidth="655.0">
+            <children>
+                <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recently Added">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+                <HBox alignment="CENTER" layoutX="14.0" layoutY="39.0" prefHeight="56.0" prefWidth="636.0" spacing="10.0" style="-fx-border-color: #1c294c;">
+                    <children>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Name" />
+                                <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sample Wallet">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Username" />
+                                <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sample Username">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="99.0" layoutY="10.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Password" />
+                                <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="211.0" layoutY="10.0">
+                            <children>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Account Address" />
+                                <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1ENIUHWEHOFNIA9ER3">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </HBox>
+                <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="128.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../details.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <JFXButton layoutX="684.0" layoutY="473.0" mnemonicParsing="false" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #1c294c;" text="Edit ">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../editact.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <JFXButton layoutX="774.0" layoutY="473.0" mnemonicParsing="false" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #1c294c;" text="Delete ">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../deleteact.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <AnchorPane layoutX="226.0" layoutY="346.0" prefHeight="121.0" prefWidth="655.0" style="-fx-background-color: #1c294c;">
+            <children>
+                <Text fill="#9c9b0b" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account/Wallet Details" />
+                <JFXTextField fx:id="accountpassword" alignment="CENTER" editable="false" focusColor="#a84040" layoutX="389.0" layoutY="61.0" prefHeight="28.0" prefWidth="231.0" text="Hello" unFocusColor="#dddddd">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </JFXTextField>
+                <Text fill="#cdcccc" layoutX="456.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Password" />
+            <HBox alignment="CENTER" layoutX="14.0" layoutY="54.0" prefHeight="36.0" prefWidth="368.0">
+               <children>
+                      <VBox alignment="CENTER" prefHeight="35.0" prefWidth="151.0">
+                          <children>
+                              <Text fill="#d3d3d3" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Username" />
+                              <Text fx:id="accountname" fill="#d3d3d3" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sample Username">
+                                  <font>
+                                      <Font name="System Bold" size="14.0" />
+                                  </font>
+                              </Text>
+                          </children>
+                      </VBox>
+                      <VBox alignment="CENTER" prefHeight="28.0" prefWidth="161.0">
+                          <children>
+                              <Text fill="#dadada" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Address" />
+                              <Text fx:id="accountwebsite" fill="#dadada" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1ENIUHWEHOFNIA9ER3">
+                                  <font>
+                                      <Font name="System Bold" size="14.0" />
+                                  </font>
+                              </Text>
+                          </children>
+                      </VBox>
+               </children>
+            </HBox>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </AnchorPane>
+        <JFXButton fx:id="wallets" layoutX="771.0" layoutY="188.0" mnemonicParsing="false" onAction="#accesswallets" prefHeight="33.0" prefWidth="115.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #1c294c;" text="Wallets">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../wallet.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <JFXButton fx:id="accountsbtn" layoutX="771.0" layoutY="228.0" mnemonicParsing="false" onAction="#accessaccounts" prefHeight="33.0" prefWidth="115.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #1c294c;" text="Accounts">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../account.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+        <JFXButton fx:id="cryptosbtn" layoutX="770.0" layoutY="268.0" mnemonicParsing="false" onAction="#accesscrypto" prefHeight="33.0" prefWidth="115.0" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #1c294c;" text="Cryptos">
+            <font>
+                <Font size="14.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../cryptodark.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </JFXButton>
+      <JFXTextField fx:id="searchfield" alignment="CENTER" layoutX="309.0" layoutY="134.0" prefHeight="25.0" prefWidth="267.0" promptText="Enter Search Item" />
+      <JFXButton fx:id="searchbtbn" layoutX="576.0" layoutY="135.0" mnemonicParsing="false" onAction="#Searchact" style="-fx-border-width: 0px 0px 1px 0px; -fx-border-color: #1c294c;" text="Search" />
+    </children>
+</AnchorPane>
