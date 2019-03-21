@@ -5,8 +5,8 @@ SafeHouse IO is a solution built with the intention of solving this problem with
 
 
 ### How to Install
->To install this application, simply download the Installer file [Here]().
+>To install this application, simply download the Installer file [Here](https://github.com/officialhord/SafeHouseIO/blob/master/SafeHouse.exe).
 >Once you are done installing register to add an account in the app database and you are good to go.
 
 ### How to Use
-
+After Installation, the Database holds a trial account with username and password as trial, this can be used to access the application. But If you want to create a new user kindly use the register button provided in the login section to add a new user account.
