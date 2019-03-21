@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="SafeHouse_io.jnlp">
+  <information>
+    <title>Safe House - Password Keep</title>
+    <vendor>SafeHouse.IO</vendor>
+    <description>SafeHouse.io</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="SafeHouse_io.jar" size="5350686" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="Home.Main"  name="SafeHouse.io" />
+  <update check="background"/>
+</jnlp>
