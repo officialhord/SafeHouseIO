@@ -10,3 +10,5 @@ SafeHouse IO is a solution built with the intention of solving this problem with
 
 ### How to Use
 After Installation, the Database holds a trial account with username and password as trial, this can be used to access the application. But If you want to create a new user kindly use the register button provided in the login section to add a new user account.
+
+# Updated
